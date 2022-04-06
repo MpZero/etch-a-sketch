@@ -1,0 +1,23 @@
+#container {
+  background-color: navy;
+  width: auto;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: auto;
+  /* display: flex; */
+
+}
+
+#divGrid {
+  /* display: flex; */
+  background-color: black;
+  height: 60px;
+  width: 60px;
+  margin: 0px;
+}
+
+#divGrid:hover {
+  background-color: aqua;
+}
