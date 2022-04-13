@@ -1,6 +1,8 @@
 const container = document.querySelector("#container");
 const content = document.querySelector("div");
 const btnEl = document.querySelector("#btn-el");
+const btnRandom = document.querySelector("#btn-random")
+console.log(btnRandom)
 let pixels = 16;
 
 //renders the game
@@ -24,16 +26,29 @@ function pixelDivs() {
     container.appendChild(div);
     div.addEventListener('mousemove', () => {
       // div.setAttribute("class", "paintedDiv");
-      changebackground(div);
+      defaultColor(div);
+      // // randomColor(div)
     });
   }
 }
 const divGrid = document.querySelectorAll("#divGrid");
 
 //paints divs black
-function changebackground(div) {
+function defaultColor(div) {
   div.style.backgroundColor = "black";
 }
+//RGB color WIP
+///////////////////////////////////////////////////////////////////////
+// btnRandom.addEventListener('click', () => {
+//   randomColor(div)
+//   // console.log("h")
+// });
+
+// function randomColor() {
+//   const randomColor = Math.floor(Math.random()*16777215).toString(16);
+//   divGrid.style.backgroundColor = "#" + randomColor;
+// }
+///////////////////////////////////////////////////////////////////////
 
 //first clears canvas, then asks the user for new grid
 btnEl.addEventListener('click', () => {
