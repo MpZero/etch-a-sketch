@@ -15,7 +15,6 @@ function createGrid() {
   pixelDivs();
   container.style.gridTemplateColumns = `repeat(${pixels}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${pixels}, 1fr)`;
-  //set the quantity of squares per side
 }
 
 //set the quantity of divs(pixels) and adds event to paint them
@@ -25,9 +24,7 @@ function pixelDivs() {
     div.setAttribute("id", "divGrid");
     container.appendChild(div);
     div.addEventListener('mousemove', () => {
-      // div.setAttribute("class", "paintedDiv");
       defaultColor(div);
-      // // randomColor(div)
     });
   }
 }
@@ -37,18 +34,6 @@ const divGrid = document.querySelectorAll("#divGrid");
 function defaultColor(div) {
   div.style.backgroundColor = "black";
 }
-//RGB color WIP
-///////////////////////////////////////////////////////////////////////
-// btnRandom.addEventListener('click', () => {
-//   randomColor(div)
-//   // console.log("h")
-// });
-
-// function randomColor() {
-//   const randomColor = Math.floor(Math.random()*16777215).toString(16);
-//   divGrid.style.backgroundColor = "#" + randomColor;
-// }
-///////////////////////////////////////////////////////////////////////
 
 //first clears canvas, then asks the user for new grid
 btnEl.addEventListener('click', () => {
@@ -73,9 +58,7 @@ function userInput() {
   } else {
     renderGame()
   }
-  
 }
-
 //removes old grid
 function removeGrid() {
   let squares = container.querySelectorAll("div")
@@ -85,3 +68,15 @@ function removeGrid() {
 renderGame()
 
 
+//RGB color WIP
+///////////////////////////////////////////////////////////////////////
+// btnRandom.addEventListener('click', () => {
+//   randomColor(div)
+//   // console.log("h")
+// });
+
+// function randomColor() {
+//   const randomColor = Math.floor(Math.random()*16777215).toString(16);
+//   divGrid.style.backgroundColor = "#" + randomColor;
+// }
+//////////////////////////////////////////////////////////////////////
